@@ -2,10 +2,10 @@
 
 namespace App\Exceptions;
 
-use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
+use HandlerValidationRequestExecption;
 use Throwable;
 
-class Handler extends ExceptionHandler
+class Handler extends HandlerValidationRequestExecption
 {
     /**
      * A list of the exception types that are not reported.

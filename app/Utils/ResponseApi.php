@@ -33,7 +33,7 @@ abstract class ResponseApi
     public static function warning(
         array $data = [],
         string $message = "Atenção requisição inválida.",
-        int $httpCode = Response::HTTP_BAD_REQUEST
+        int $httpCode = Response::HTTP_UNPROCESSABLE_ENTITY
     ): JsonResponse {
         return self::json($message, $data, $httpCode);
     }

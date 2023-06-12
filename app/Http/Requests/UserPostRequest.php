@@ -4,10 +4,10 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class LoginPostRequest extends FormRequest
+class UserPostRequest extends FormRequest
 {
     use FailedValidation;
-
+    
     /**
      * Get the validation rules that apply to the request.
      *
@@ -15,9 +15,12 @@ class LoginPostRequest extends FormRequest
      */
     public function rules()
     {
+        $rule = 'required|min:3';
         return [
-            'login' => 'required|min:3',
-            'password' => 'required|min:3',
+            'login' => $rule,
+            'password' => $rule,
+            'name' => $rule,
+            'admin' => 'required|boolean'
         ];
     }
 }
