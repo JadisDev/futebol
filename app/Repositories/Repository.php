@@ -6,11 +6,11 @@ use App\Interfaces\Repository\RepositoryInterface;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Collection;
 
-abstract class Repository implements RepositoryInterface
+class Repository implements RepositoryInterface
 {
     protected Model $model;
 
-    protected function __construct(Model $model)
+    public function __construct(Model $model)
     {
         $this->model = $model;
     }
